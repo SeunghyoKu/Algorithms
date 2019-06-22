@@ -5,7 +5,7 @@
 - CodeUp: https://codeup.kr/
 
 # Information
--Start Date: 2019-05-20
--Used language: Python, JavaScript, ...
+- Start Date: 2019-05-20
+- Used language: Python, JavaScript, ...
 
 Continue..
