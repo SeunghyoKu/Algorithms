@@ -6,9 +6,9 @@ function solution(arr)
     //새로운 답을 저장할 answer라는 배열을 만듭니다.
     var answer = [];    
     
-    //입력 받은 array의 길이 만큼 반복한다
+    //입력 받은 array의 길이 만큼 반복합니다.
     for (var i = 0; i<arr.length; i++) {
-        //만약 answer에 가장 마지막으로 넣은 값과 i를 비교하여 만약 두 값이 다르다면!!!!
+        //만약 answer에 가장 마지막으로 넣은 값과 arr의 i항을 비교하여 만약 두 값이 다르다면!!!!
         //i항을 아까 만들어둔 answer 에 push 합니다.
         if (answer[answer.length - 1] !== arr[i]) {
             answer.push(arr[i]);
@@ -27,4 +27,4 @@ function solution(arr)
 }
 
 filter를 사용하였다.
-*?
+*/
