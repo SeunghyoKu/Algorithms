@@ -4,7 +4,8 @@
 - Programmers: https://programmers.co.kr/learn/challenges
 - CodeUp: https://codeup.kr/
 
-@Start Date: 2019-05-20
-@Used language: Python, JavaScript, ...
+# Information
+-Start Date: 2019-05-20
+-Used language: Python, JavaScript, ...
 
 Continue..
