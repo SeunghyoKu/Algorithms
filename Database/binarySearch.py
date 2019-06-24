@@ -28,9 +28,9 @@ def binary_search(array, value):
         #상한선과 하한선이 같아질 때까지 경계값을 줄엿다면, 찾고 있는 값이 이 배열에 없다는 것이다.
     return -1
 
-#기본 함수
 
 
+#
 arr = [1,2,5,7,9,13,15,18,33,45,77]
 val = 9
 print(binary_search(arr,val))
