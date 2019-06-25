@@ -1,4 +1,4 @@
-function slectionSort(array) {
+function selectionSort(array) {
   for (var i = 0; i< array.length; i++) {
     //현재까지의 최솟값이 들어있는 인덱스를 저장
     //일단은 i의 값을 최솟값으로 저장
