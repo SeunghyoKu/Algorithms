@@ -6,8 +6,9 @@ def insertion_sort(array):
         tempo_value = array[index]
 
         #position 왼쪽의 값이 temp_value 보다 클 때
-        # #왼 쪽 값을 한 쪽 오른 쪽 값으로 옮긴다.
-        #이 과정을 temp_value 가 작을 때까지 반복
+        #왼쪽 값을 한 셀 오른쪽으로 옮긴 후 position 값을 1 감소시킨다.
+        #새 position의 왼쪽 값이 temp_value보다 큰지 확인
+        #이 과정을 새 position의 왼쪽 값이 temp_value가 작을 때까지 반복
         while position > 0 and array[position - 1] > tempo_value:
             array[position] = array[position - 1]
             position = position -1
