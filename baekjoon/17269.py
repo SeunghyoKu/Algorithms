@@ -33,7 +33,7 @@ elif a_length > b_length:
     for i in range(b_length):
         name = name + a[i] + b[i]
     name = name + a[b_length:]
-    
+   
 else:
     for i in range(a_length):
         name = name + a[i] + b[i]
