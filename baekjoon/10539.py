@@ -8,7 +8,6 @@
 
 수열 B가 주어질 때, 수빈이의 규칙에 따른 수열 A는 뭘까?
 '''
-
 # map()을 이용해서 input()을 받아준 후 다시 list함수로 리스트로 만들어줘야 한다.
 N = int(input())
 B = list(map(int, input().split()))
