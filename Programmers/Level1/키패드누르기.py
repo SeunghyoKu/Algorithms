@@ -39,3 +39,6 @@ def get_distance(left, right, curr):
     left_dist = abs(left[0] - curr[0]) + abs(left[1] - curr[1])
     right_dist = abs(right[0] - curr[0]) + abs(right[1] - curr[1])
     return left_dist, right_dist
+
+# 파이썬은 일반적인 자료형(string, int 등)과 tuple은 immutable 합니다
+# 그래서 고생을 많이 했는데 .. 이 경우 mutable 해야되기 때문에 list 나 dictionary 타입을 사용해야 합니다
