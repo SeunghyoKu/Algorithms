@@ -1,6 +1,8 @@
 # 베스트앨범 - 해시
 # https://programmers.co.kr/learn/courses/30/lessons/42579
 
+# 딕셔너리 안에 딕셔너리를 넣어서 풀어보았습니다
+
 def solution(genres, plays):
     song_dict = {}
     for i in range(len(genres)):
@@ -32,3 +34,4 @@ def solution(genres, plays):
                 answer[-1], answer[-2] = answer[-2], answer[-1]
                 
     return answer
+
