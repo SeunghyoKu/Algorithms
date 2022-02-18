@@ -24,22 +24,33 @@
 #굉장히 오랜만에 푸는 문제다.. 그동안 아프고 바쁜 일이 많았어서.. 다시 꾸준히 풀도록 노력해야겠다.
 
 #나의 풀이
+# 다시 풀어보았는데, 본인이 잃어버렸을 경우 우선 지급 하게 했더니 자꾸 오류가 발생해
+# 아예 고려하지 않도록 개선하였다.
 def solution(n, lost, reserve):
-
-    #예외 중 잃어버린 학생 중 여벌을 가져온 경우, 본인이 그 체육복을 입기 때문에, 이 경우의 학생들을 제외한 새로운 lost, reserve 리스트를 만든다.
-    after_lost = [l for l in lost if l not in reserve]
-    after_reserve = [r for r in reserve if r not in lost]
+    answer = 0
+    if len(lost) == 0 or len(reserve) == n:
+        return n
     
-    #그리디 알고리즘을 이용하여, 일단 왼쪽의 학생을 우선적으로 체육복을 빌려주는 것으로 생각했다.
-    for i in after_reserve:
-        if i - 1 in after_lost:
-            after_lost.remove(i - 1)
-            
-        #왼쪽이 없으면 오른쪽에서 빌려야지!
-        elif i + 1 in after_lost:
-            after_lost.remove(i + 1)
-            
-    return n - len(after_lost)
+    set_lost = list(set(lost) - set(reserve))
+    set_reserve = list(set(reserve) - set(lost))
+    
+    for i in range(1, n + 1):
+        if i not in set_lost and i not in set_reserve:
+            answer += 1
+        
+        elif i not in set_lost and i in set_reserve:
+            prev_stu, next_stu = i - 1, i + 1
+            answer += 1
+            if prev_stu in set_lost:
+                set_reserve.remove(i)
+                set_lost.remove(prev_stu)
+                answer += 1
+            elif next_stu in set_lost:
+                set_lost.remove(next_stu)
+                set_reserve.remove(i)
+
+
+    return answer
     
     
 '''
